@@ -1,3 +1,8 @@
+body {
+  background: black;
+  color: white;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +40,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.star-wars {
+  font-family: monospace;
+  font-size: 100px;
+  color: yellow;
+}
+
+.movie-cards {
+  border: 1px solid gray;
+  background: whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
+}
+
+ul {
+  color: black;
+  list-style: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+}
+
+.opening-crawl {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: yellow;
 }
