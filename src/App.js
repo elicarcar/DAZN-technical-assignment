@@ -13,7 +13,6 @@ function App() {
   async function getStudioGhibliFilms() {
     try {
       const response = await axios.get("https://ghibliapi.herokuapp.com/films");
-      console.log(response);
       response.data.map((d) =>
         Promise.all(
           d.species.map((s) => fetch(s).then((res) => res.json()))
@@ -29,15 +28,15 @@ function App() {
 
   useEffect(() => {
     getStudioGhibliFilms();
+    return () => {
+      getStudioGhibliFilms();
+    };
   }, []);
 
   function handleItemClick(e, { name }) {
     setActiveItem(name);
     setOnMovieSection(!onMovieSection);
   }
-  // function handleClick(id) {
-  //   console.log(id);
-  // }
 
   return (
     <div className="App">

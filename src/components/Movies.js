@@ -7,7 +7,6 @@ const Movies = ({ movies }) => {
 
   const handleTitleClick = (e, props) => {
     const { index } = props;
-    console.log(props);
     const newIndex = activeIndex === index ? -1 : index;
     setActiveIndex(newIndex);
   };

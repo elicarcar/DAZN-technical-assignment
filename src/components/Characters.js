@@ -45,14 +45,11 @@ const Characters = () => {
     fetchCharacters();
   }, []);
 
-  console.log(ghibliCharacters);
-
   const handleSearchChange = (e) => {
     setSearchValue(e.target.value);
   };
 
   const handleButtonClick = (value) => {
-    console.log(value);
     setShowMovieDetails(false);
     const isMatch = ghibliCharacters.filter(
       (char) => char.name.toLowerCase() === value.toLowerCase()
@@ -65,10 +62,7 @@ const Characters = () => {
 
   const handleMovieClick = () => {
     setShowMovieDetails(true);
-    console.log("Clicked");
   };
-
-  console.log("results", results);
 
   return (
     <>
