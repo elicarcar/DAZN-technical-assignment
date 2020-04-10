@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: rgba(99, 201, 214, 0.397);
   color: white;
 }
 
@@ -42,28 +42,6 @@ body {
   }
 }
 
-.grid-container {
-  display: grid;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-}
-
-.star-wars {
-  font-family: monospace;
-  font-size: 100px;
-  color: yellow;
-}
-
-.movie-cards {
-  border: 1px solid gray;
-  background: whitesmoke;
-  padding: 20px;
-  margin: 10px;
-  text-align: left;
-}
-
 ul {
   color: black;
   list-style: none;
@@ -71,7 +49,23 @@ ul {
   font-size: 20px;
 }
 
-.opening-crawl {
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  color: yellow;
+.char-input {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.movie-container {
+  background-image: url("./images/studio-ghibli_ua.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.char-detail.card {
+  background: blue;
 }
